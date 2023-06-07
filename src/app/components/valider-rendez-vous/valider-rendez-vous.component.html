@@ -1,0 +1,39 @@
+<app-banner title="VALIDATION ET CONFIRMATION LES RENDEY-VOUS"></app-banner>
+<table class="table table-hover table-info">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Telephone</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Selection</th>
+        <th scope="col">Actions</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of  pageOfItems">
+        <th scope="row">{{r._id}}</th>
+        <td>{{r.firstName}}</td>
+        <td>{{r.gender | gender}}{{r.lastName}}</td>
+        <td>{{r.telephone}}</td>
+        <td>{{r.adresse}}</td>
+        <td>{{r.date}}</td>
+        <td>{{r.description}}</td>
+        <td>{{r.selection}}</td>
+        <td><input type="image" (click)="updateRendez(r._id)"  name="Modifier" src="assets/images/modifier.jpg" alt="text" style="height: 50px;width: 50px;"></td>
+        <td><input type="image" (click)="deleteRendezVous(r._id)"  name="delete" src="assets/images/delete.jpg" alt="text" style="height: 50px;width: 50px;"></td>
+
+
+      </tr>
+
+    </tbody>
+    <div class="card-footer pb-0 pt-3">
+      <jw-pagination 
+     [items]="rendez"  [pageSize]="2" (changePage)="onChangePage($event)"></jw-pagination>
+     </div>
+  </table>

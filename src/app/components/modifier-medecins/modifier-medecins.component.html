@@ -1,0 +1,86 @@
+<app-banner title="UPDATE DOCTORS"></app-banner>
+<div class="row contact-rooo no-margin">
+    <div class="container">
+       <div class="row">
+           
+        <div style="padding:20px" class="col-sm-6">
+        <h2 style="font-size:30px ; color: darkgreen; text-decoration:underline; text-align: center;">UPDATE DOCTORS</h2>
+        <form [formGroup]="modifierForm" >
+            
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Mobile Number:</label></div>
+                <div class="col-sm-8"><input type="text" formControlName="telephone"  name="name" placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="modifierForm.controls['telephone'].invalid && (modifierForm.controls['telephone'].touched ||
+            modifierForm.controls['telephone'].dirty)">
+
+            <div *ngIf="modifierForm.controls['telephone'].errors.required" class="red">
+              Telephone is required
+            </div>
+            <div *ngIf="modifierForm.controls['telephone'].errors.minlength" class="red">
+              Telephone must have at least 8 chars
+            </div>
+            <div *ngIf="modifierForm.controls['telephone'].errors.maxlength" class="red">
+              Telephone must have at most 8 chars
+
+            </div>
+
+            
+            </div>
+           
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Address :</label></div>
+                <div class="col-sm-8"><input type="text" name="name"  formControlName="adresse"  placeholder="Enter Address" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="modifierForm.controls['adresse'].invalid && (modifierForm.controls['adresse'].touched ||
+            modifierForm.controls['adresse'].dirty)">
+            <div *ngIf="modifierForm.controls['adresse'].errors.required" class="red">
+              Address is required
+            </div>
+            <div *ngIf="modifierForm.controls['adresse'].errors.minlength" class="red">
+              Address must have at least 3 chars
+            </div>
+            <div *ngIf="modifierForm.controls['adresse'].errors.maxlength" class="red">
+              Address must have at most 30 chars
+            </div>
+
+            
+            
+            </div>
+            
+             <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                <div class="col-sm-8">
+                 <button  (click)="update()"  class="btn btn-success btn-sm">UPDATE DOCTORS</button>
+
+                </div>
+
+            </div>
+
+          </form>
+        </div>
+         <div class="col-sm-6">
+                
+              <div style="margin:50px" class="serv"> 
+            
+           
+         
+                          
+          
+                <img class="img-fluid" src="assets/images/doctorsmodifier.avif" alt="" />
+
+
+   
+        
+            
+            
+          
+       </div>    
+            
+         
+     </div>
+
+        </div>
+    </div>
+    
+  </div>

@@ -1,0 +1,95 @@
+<app-banner title="LOGIN"></app-banner>
+<div class="row contact-rooo no-margin">
+    <div class="container">
+       <div class="row">
+           
+       
+        <div style="padding:20px" class="col-sm-6">
+           
+        <h2 style="font-size:30px;color: blue; text-align: center; text-decoration: underline;">LOGIN</h2>
+        <form [formGroup]="loginForm" >
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Email :</label></div>
+                <div class="col-sm-8"><input type="email" formControlName="email"  placeholder="Enter Email" name="name" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].touched ||
+            loginForm.controls['email'].dirty)">
+            <div *ngIf="loginForm.controls['email'].errors.required" class="red">
+                Email is required
+            </div>
+            <div *ngIf="loginForm.controls['email'].errors.email" class="red">
+                Email is invalid
+            </div>
+            </div>
+            
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Mobile Number:</label></div>
+                <div class="col-sm-8"><input type="telephone" name="name"  formControlName="telephone"  placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="loginForm.controls['telephone'].invalid && (loginForm.controls['telephone'].touched ||
+            loginForm.controls['telephone'].dirty)">
+            <div *ngIf="loginForm.controls['telephone'].errors.required" class="red">
+                Telephoneis required
+            </div>
+            <div *ngIf="loginForm.controls['telephone'].errors.minlength" class="red">
+                Telephone has benn at 8 number
+            </div>
+            <div *ngIf="loginForm.controls['telephone'].errors.maxlength" class="red">
+                Telephone has benn most at 8 number
+            </div>
+            </div>
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Password:</label></div>
+                <div class="col-sm-8"><input type="password" name="name" formControlName="password"  placeholder="Enter Password" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].touched ||
+            loginForm.controls['password'].dirty)">
+            <div *ngIf="loginForm.controls['password'].errors.required" class="red">
+                Password is required
+            </div>
+            <div *ngIf="loginForm.controls['password'].errors.minlength"  class="red">
+               Password has benn at 8 chars
+            </div>
+            <div *ngIf="loginForm.controls['password'].errors.maxlength" class="red">
+                Password has benn most  12 chars
+            </div>
+            </div>
+            
+               
+             <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                <div class="col-sm-8">
+                 <button  (click)="login()" class="btn btn-success btn-sm">LOGIN</button>
+                 <span style="color: red;">{{errorMsg}}</span><br>
+                 <label>Creer un compte des patietns</label> : <br> 
+                 <button (click)="comptePatients()"  class="class=btn btn-link">Creer Compte</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    
+         <div class="col-sm-6">
+                
+              <div style="margin:50px" class="serv"> 
+            
+           
+         
+                          
+          
+                <img class="img-fluid" src="assets/images/log.jpg" alt="" />
+
+
+   
+        
+            
+            
+          
+       </div>    
+            
+         
+     </div>
+
+        </div>
+    </div>
+    
+  </div>

@@ -1,0 +1,30 @@
+<app-banner title="VOIR RESULTATS MEDECINS CONFIRMER"></app-banner>
+
+<div class="row">
+     <div class="blog-row" *ngFor="let pub of result">
+          
+         
+           <div class="col-lg">
+               <div class="single-blog">
+                    <figure>
+                         <img src="assets/images/medecins.jpg" alt="">
+                    </figure>
+                    <div class="blog-detail" >
+                       <h5>FirstName && LastName :</h5>  <p class="pp">{{pub.medecins[0]?.firstName}} {{pub.medecins[0]?.lastName}}  </p>
+                        <h5>Title :</h5><p class="pp">{{pub.title}}</p>
+                        <h5>Description :</h5><p class="pp">{{pub.description}}</p>
+                           <h5>Specialite :</h5> <p class="pp">{{pub.medecins[0]?.specialite}}</p>
+                          <h5> Mobile :</h5> <p class="pp">{{pub.medecins[0]?.telephone}}</p>
+                           <h5>Date :</h5><p class="pp">{{pub.date}}</p>
+                           <div class="link">
+                              <input type="image" (click)="envoyer(pub)" name="Name of image button" src="assets/images/envoyer.jpg" height="80px" width="100px" alt="text">
+                         </div>
+                    </div>
+                    
+                    
+               </div>
+          </div> 
+     </div>
+  
+
+</div>

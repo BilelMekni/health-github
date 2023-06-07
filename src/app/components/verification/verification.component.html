@@ -1,0 +1,33 @@
+<app-banner title="Verification Chirugie Generale" ></app-banner>
+<div class="blog-row row">
+ <div class="col-lg-4 col-md-6" *ngFor="let med of medecins"  >
+                  <div class="single-blog">
+                       <figure>
+                            <img src="assets/images/chi.jpg" alt="">
+                       </figure>
+                       <div class="blog-detail" >
+                            <!-- <small>By Admin | August 10 2018</small> -->
+                            <table>
+                              <h4>FirstName : {{med.firstName}}</h4>
+                              <h4>LastName : {{med.lastName}}</h4>
+                              <p>Email : {{med.email}}</p>
+                              <p>Telephone : {{med.telephone}}</p>
+                              <p>Specialite : {{med.specialite}}</p>
+                              <p>Experience : {{med.experience}}</p>
+                              <p>Role : {{med.role}}<p>
+                              <p>CV : {{med.cv}}</p>
+                              <!-- <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p> -->
+                              <div class="link">
+                               <input type="image" (click)="accepter()"  name="Accepter" src="assets/images/blog/accepter.jpg" alt="text" style="height: 100px;width: 100px;"> 
+                               <input type="image" (click)="retour()" name="Retour" src="assets/images/blog/retour.jpg" alt="text" style="height: 100px;width: 100px;">  
+                               <input type="image" (click)="prix()" name="Retour" src="assets/images/prix.webp" alt="text" style="height: 100px;width: 100px;">  
+
+ 
+                            </div>
+                            </table>
+                       </div>
+                       
+                       
+                  </div>
+             </div> 
+            </div>

@@ -1,0 +1,42 @@
+<div class="col-lg-3 kvxol col-md-6">
+    <div class="single-key ky-1">
+         <i class="fas fa-briefcase-medical"></i> 
+        <img src="assets/images/response.jpg" alt="" srcset="">
+    </div>
+        <table class="table table-primary">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>ClientsName</th>
+                <th>Mobile</th>
+                <th>Specialite</th>
+                <th>Date</th>
+                <th>Actions</th>
+        
+            </tr>
+        </thead>
+            <tr *ngFor="let p of resultats">
+                <td>{{p._id}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.status}}</td>
+                <td>{{p.resultats[0]?.firstName}} {{p.resultats[0]?.lastName}}</td>
+                <td>{{p.resultats[0]?.telephone}}</td>
+                <td>{{p.resultats[0]?.specialite}}</td>
+                <td>{{p.date}}</td>
+               <td> <input type="image" (click)="confirmerResultat(p._id)"  name="Name of image button" src="assets/images/conn.jpg" height="50px" width="100px" alt="text"></td>
+               <td> <input type="image" (click)="deleteResultas(p._id)"  name="Name of image button" src="assets/images/supp.png" height="50px" width="50px" alt="text"></td>
+
+
+
+
+            </tr>
+        </table>
+
+    
+   
+
+</div> 

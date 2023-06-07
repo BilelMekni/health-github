@@ -1,0 +1,66 @@
+<app-banner title="Resultat (retourner reponses)"></app-banner>
+<div class="row contact-rooo no-margin">
+    <div class="container">
+       <div class="row">
+           
+       
+        <div style="padding:20px" class="col-sm-6">
+           
+        <h2 style="font-size:30px;color: blue; text-align: center; text-decoration: underline;">RETOURNER REPONSE AUX PATIENTS</h2>
+        <form #resultatForm="ngForm" (ngSubmit)="validate()" >
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Title :</label></div>
+                <div class="col-sm-8"><input type="text" [(ngModel)]="resultat.title" [ngModelOptions]="{standalone: true}"    placeholder="Enter Title " name="name" class="form-control input-sm"  ></div>
+            </div>
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Description:</label></div>
+                <div class="col-sm-8"><input type="text" [(ngModel)]="resultat.description" [ngModelOptions]="{standalone: true}"    placeholder="Enter Description" name="name" class="form-control input-sm"  ></div>
+            </div>
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Mobile:</label></div>
+                <div class="col-sm-8"><input type="text" name="name"  [(ngModel)]="resultat.telephone" [ngModelOptions]="{standalone: true}"   class="form-control input-sm"  ></div>
+            </div>
+              <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Date:</label></div>
+                <div class="col-sm-8"><input type="date" name="name"  [(ngModel)]="resultat.date" [ngModelOptions]="{standalone: true}"   class="form-control input-sm"  ></div>
+            </div>
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Specialite:</label></div>
+                <div class="col-sm-8"><input type="text" name="name"  [(ngModel)]="resultat.specialite" [ngModelOptions]="{standalone: true}"   class="form-control input-sm"  ></div>
+            </div>
+
+            
+               
+             <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                <div class="col-sm-8">
+                    <input type="image" name="Valider"  src="assets/images/add.webp" alt="text" style="height: 100px;width: 100px;">
+                    <input type="image" (click)="retour()" name="Valider" src="assets/images/retour.jpg" alt="text" style="height: 100px;width: 100px;">  
+                </div>
+            </div>
+        </form>
+        </div>
+    
+         <div class="col-sm-6">
+                
+              <div style="margin:50px" class="serv"> 
+                          
+          
+                <img class="img-fluid" src="assets/images/reponse.png" alt="" />
+
+
+
+   
+        
+            
+            
+          
+       </div>    
+            
+         
+     </div>
+
+        </div>
+    </div>
+    
+  </div>

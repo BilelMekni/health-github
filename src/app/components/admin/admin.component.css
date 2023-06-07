@@ -1,0 +1,19 @@
+ul {  
+    padding : 10px ;  
+    border-radius: 100px;  
+    box-shadow: 1px 0 10px 10px rgba(15,122,255,0.3);  
+    background:  
+      linear-gradient( rgba(180,220,255,0.9), transparent ),  
+      linear-gradient( -15deg, rgba(15,122,255,0.3), transparent ),  
+      linear-gradient( -45deg, rgba(15,122,255,0.9), transparent );  
+    background-blend-mode: multiply;  
+  } 
+  a {  
+    padding: 10px;  
+    color: #237546;  
+    font-weight: 700;  
+    text-shadow: none;  
+    -webkit-transition: color 0.3s;  
+    -moz-transition: color 0.3s;  
+    transition: color 0.3s;  
+}   

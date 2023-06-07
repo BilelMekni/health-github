@@ -1,0 +1,37 @@
+<app-banner title="ESPACE PATIENTS"></app-banner>
+<table class="table table-info">
+    
+    <thead>
+        <tr>
+            
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+            <th scope="col">Reserve</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of pageOfItems">
+            
+            <td>{{r.title}}</td>
+            <td>{{r.description}}</td>
+            <td>{{r.status}}</td>
+           <td>
+            <span class="badge rounded-pill bg-warning" type="button" (click)="display()"*ngIf="r.users.length==0">waiting</span>
+            <span type="button" (click)="display(r.users[0])" class="badge rounded-pill bg-success" *ngIf="r.users.length>0">Reserved</span>
+        </td>
+            <td>
+            <span class="badge rounded-pill bg-danger" type="button" (click)="voir()"*ngIf="r.users.length==0">Resultat</span>
+            <span type="button" (click)="voir(r.users[0])" class="badge rounded-pill bg-info" *ngIf="r.users.length>0">Confirme</span>
+            </td>
+        </tr>
+
+    </tbody>
+
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination [items]="pubs" [pageSize]="4" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+
+</table>

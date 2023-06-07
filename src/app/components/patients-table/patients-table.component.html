@@ -1,0 +1,41 @@
+<table class="table table-striped table-success">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Role</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pageOfItems">
+        <th scope="row">{{p._id}}</th>
+        <td>{{p.gender | gender}}{{p.firstName}}</td>
+        <td>{{p.lastName}}</td>
+        <td>{{p.telephone}}</td>
+        <td>{{p.adresse}}</td>
+        <td>{{p.role}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.status}}</td>
+
+        <td>
+            <input type="image" (click)="confirmePatients(p._id)"  name="Name of image button" src="assets/images/confirme.webp" height="50px" width="100px" alt="text">
+            <input type="image" (click)="updatePatients(p._id)"   name="Name of image button" src="assets/images/update.png" height="50px" width="100px" alt="text">
+            <input type="image" (click)="deletePatients(p._id)"   name="Name of image button" src="assets/images/supp.png" height="50px" width="50px" alt="text">  
+  
+        </td>
+
+      </tr>
+      
+    </tbody>
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination 
+       [items]="patients"  [pageSize]="4" (changePage)="onChangePage($event)"></jw-pagination>
+       </div>
+  </table>

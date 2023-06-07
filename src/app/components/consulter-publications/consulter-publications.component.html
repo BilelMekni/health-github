@@ -1,0 +1,27 @@
+<app-banner title="PUBLICATION CONFIRMER"></app-banner>
+<div class="row">
+     <div class="col-lg-4 col-md-6" *ngFor="let pub of pubs">
+          <div class="single-blog">
+               <figure>
+                    <img src="assets/images/blog/pub.jpg" alt="">
+               </figure>
+               <div class="blog-detail" >
+                    <h3 class="title">FirstName && lastName</h3><p class="p">{{pub.patients[0]?.firstName}} && {{pub.patients[0]?.lastName}}</p>
+                    <h3 class="title">Mobile Phone</h3><p class="p">{{pub.patients[0]?.telephone}}</p>
+                    <h3 class="title">Title</h3><p class="p">{{pub.title}}</p>
+                 
+                    <!-- <div class="link">
+                         <a   href="">Contacter  </a><i   (click)="Contacter(pub)" class="fas fa-long-arrow-alt-right"  ></i>
+                    </div> -->
+                    <input type="image" (click)="Contacter(pub)" name="Name of image button" src="assets/images/contacter.jpg" height="80px" width="100px" alt="text">
+
+               </div>
+              
+
+
+          </div>
+
+     </div>
+   
+
+</div>

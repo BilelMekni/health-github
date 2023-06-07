@@ -1,0 +1,90 @@
+<app-banner title="PRISE DE RENDEY-VOUS"></app-banner>
+<div class="row contact-rooo no-margin">
+    <div class="container">
+       <div class="row">
+           
+       
+        <div style="padding:20px" class="col-sm-6">
+           
+        <h2 style="font-size:30px;color: blue; text-align: center; text-decoration: underline;">RENDEY-VOUS</h2>
+        <form #rendezForm="ngForm" (ngSubmit)="validate()" >
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>FirstName :</label></div>
+                <div class="col-sm-8"><input type="text" [(ngModel)]="rendez.firstName" [ngModelOptions]="{standalone: true}"   placeholder="Enter firstName patient " name="name" class="form-control input-sm"  ></div>
+            </div>
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>LastName:</label></div>
+                <div class="col-sm-8"><input type="text" [(ngModel)]="rendez.lastName" [ngModelOptions]="{standalone: true}"   placeholder="Enter lastName patient" name="name" class="form-control input-sm"  ></div>
+            </div>
+            
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Mobile Number:</label></div>
+                <div class="col-sm-8"><input type="telephone"   [(ngModel)]="rendez.telephone" [ngModelOptions]="{standalone: true}"   placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
+            </div>
+            
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Adresse:</label></div>
+                <div class="col-sm-8"><input type="text" name="name" [(ngModel)]="rendez.adresse" [ngModelOptions]="{standalone: true}"  placeholder="Enter adresse patient" class="form-control input-sm"  ></div>
+            </div>
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Description:</label></div>
+                <div class="col-sm-8"><input type="text" name="name" [(ngModel)]="rendez.description" [ngModelOptions]="{standalone: true}" placeholder="Enter description patient" class="form-control input-sm"  ></div>
+            </div>
+           
+            <label>Selection:</label><select class="custom-select" [(ngModel)]="rendez.selection" [ngModelOptions]="{standalone: true}">
+                <option selected >Specialite of Doctors</option>
+                <option value="1">Medecins Generaliste</option>
+                <option value="2">Chirugie Generale</option>
+                <option value="3">Gynecologue</option>
+                <option value="4">Urologie</option>
+                <option value="5">Pediatrie</option>
+                <option value="6">Cardio</option>
+                <option value="7">Reanimation</option>
+                <option value="8">Covid19</option>
+              </select>
+              <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Date:</label></div>
+                <div class="col-sm-8"><input type="date" name="name" [(ngModel)]="rendez.date" [ngModelOptions]="{standalone: true}"  class="form-control input-sm"  ></div>
+            </div>
+
+            
+               
+             <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                <div class="col-sm-8">
+                    <input type="image" (click)="accepter()"  name="Valider" src="assets/images/prise2.jpg" alt="text" style="height: 100px;width: 100px;">
+                    <input type="image" (click)="retour()" name="Retour" src="assets/images/blog/retour.jpg" alt="text" style="height: 100px;width: 100px;">  
+ 
+                 
+                </div>
+            </div>
+        </form>
+        </div>
+    
+         <div class="col-sm-6">
+                
+              <div style="margin:50px" class="serv"> 
+            
+           
+         
+                          
+          
+                <img class="img-fluid" src="assets/images/prise.jpg" alt="" />
+                <img class="img-fluid" src="assets/images/prise3.png" alt="" />
+
+
+
+   
+        
+            
+            
+          
+       </div>    
+            
+         
+     </div>
+
+        </div>
+    </div>
+    
+  </div>

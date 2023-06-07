@@ -1,0 +1,61 @@
+<app-banner title="publications"></app-banner>
+<div class="row contact-rooo no-margin">
+    <div class="container">
+       <div class="row">
+           
+       
+        <div style="padding:20px" class="col-sm-6">
+           
+        <h2 style="font-size:30px;color: blue; text-align: center; text-decoration: underline;">ADD PUBLICATIONS</h2>
+        <form #publicationForm="ngForm" (ngSubmit)="validate()" >
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Title :</label></div>
+                <div class="col-sm-8"><input type="text" [(ngModel)]="publication.title" [ngModelOptions]="{standalone: true}"    placeholder="Enter Title " name="name" class="form-control input-sm"  ></div>
+            </div>
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Description:</label></div>
+                <div class="col-sm-8"><input type="text" [(ngModel)]="publication.description" [ngModelOptions]="{standalone: true}"    placeholder="Enter Description" name="name" class="form-control input-sm"  ></div>
+            </div>
+              <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Date:</label></div>
+                <div class="col-sm-8"><input type="date" name="name"  [(ngModel)]="publication.date" [ngModelOptions]="{standalone: true}"   class="form-control input-sm"  ></div>
+            </div>
+
+            
+               
+             <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                <div class="col-sm-8">
+                    <input type="image" name="Valider"  src="assets/images/add.webp" alt="text" style="height: 100px;width: 100px;">
+                    <input type="image" (click)="retour()" name="Valider" src="assets/images/retour.jpg" alt="text" style="height: 100px;width: 100px;">  
+                </div>
+            </div>
+        </form>
+        </div>
+    
+         <div class="col-sm-6">
+                
+              <div style="margin:50px" class="serv"> 
+            
+           
+         
+                          
+          
+                <img class="img-fluid" src="assets/images/publication.jpg" alt="" />
+
+
+
+   
+        
+            
+            
+          
+       </div>    
+            
+         
+     </div>
+
+        </div>
+    </div>
+    
+  </div>

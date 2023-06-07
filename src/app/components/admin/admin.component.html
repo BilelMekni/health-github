@@ -1,0 +1,52 @@
+<app-banner title="ADMIN"></app-banner>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="home" aria-selected="true">Admin</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#medecins" role="tab" aria-controls="profile" aria-selected="false">Medecins</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="messages-tab" data-toggle="tab" href="#patients" role="tab" aria-controls="messages" aria-selected="false">Patients</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="settings-tab" data-toggle="tab" href="#publications" role="tab" aria-controls="settings" aria-selected="false">Publications</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="rendez-tab" data-toggle="tab" href="#rendezvous" role="tab" aria-controls="rendezvous" aria-selected="false">Rendez-vous</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contactproblem" role="tab" aria-controls="contactproblem" aria-selected="false">Contact-Problem</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="resultat-tab" data-toggle="tab" href="#resultats" role="tab" aria-controls="resultats" aria-selected="false">Resultats</a>
+      </li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="admin" role="tabpanel" aria-labelledby="admin-table">
+        <app-admin-table></app-admin-table>
+    </div>
+    <div class="tab-pane" id="medecins" role="tabpanel" aria-labelledby="medecins-table">
+        <app-medecins-table></app-medecins-table>
+    </div>
+    <div class="tab-pane" id="patients" role="tabpanel" aria-labelledby="patients-table">
+        <app-patients-table></app-patients-table>
+    </div>
+    <div class="tab-pane" id="publications" role="tabpanel" aria-labelledby="publications-table">
+      <app-publications-table></app-publications-table>
+    </div>
+    <div class="tab-pane" id="rendezvous" role="tabpanel" aria-labelledby="rendez-vous-table">
+        <app-rendez-vous-table></app-rendez-vous-table>
+    </div>
+    <div class="tab-pane" id="contactproblem" role="tabpanel" aria-labelledby="contact-problem-table">
+      <app-contact-problem></app-contact-problem>
+  </div>
+  <div class="tab-pane" id="resultats" role="tabpanel" aria-labelledby="resultat-table">
+    <app-resultat-table></app-resultat-table>
+</div>
+
+  </div>

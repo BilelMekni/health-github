@@ -1,0 +1,47 @@
+<section class="our-blog">
+
+    <div class="container">
+     <h1 style="text-align: center; text-decoration: underline;"> Our Blog In The Clinic </h1>
+     <p style="text-align: center;" >The differents Our Blog In Clinic </p>
+
+        <div class="blog-row row">
+             <div class="col-lg-4 col-md-6" *ngFor="let article of articles" >
+                 <app-article [Inputarticle]="article"></app-article>
+             </div>
+             <!-- <div class="col-lg-4 col-md-6">
+                  <div class="single-blog">
+                       <figure>
+                            <img src="assets/images/blog/blog_02.jpg" alt="">
+                       </figure>
+                       <div class="blog-detail">
+                            <small>By Admin | August 10 2018</small>
+                              <h4>Methods of Recuirtments</h4>
+                              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
+                              <div class="link">
+                                   <a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+                              </div>
+                       </div>
+                       
+                       
+                  </div>
+             </div> -->
+             <!-- <div class="col-lg-4 col-md-6">
+                  <div class="single-blog">
+                       <figure>
+                            <img src="assets/images/blog/blog_03.jpg" alt="">
+                       </figure>
+                       <div class="blog-detail">
+                            <small>By Admin | August 10 2018</small>
+                              <h4>Methods of Recuirtments</h4>
+                              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
+                              <div class="link">
+                                   <a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+                              </div>
+                       </div>
+                       
+                       
+                  </div>
+             </div> -->
+        </div>
+    </div>
+</section>

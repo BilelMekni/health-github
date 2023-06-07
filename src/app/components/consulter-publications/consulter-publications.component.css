@@ -1,0 +1,25 @@
+.blog-detail{
+    background-color: lightblue;
+    border:2px solid Tomato;
+    border-style: dotted;
+    height: 300px;
+    width: 500px;
+   
+    
+       
+}
+.p{
+    color: black;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    color: blue;
+    position: static;
+    border: 3px solid #73AD21;
+
+}
+.link{
+    position: static;
+    border: 3px solid #a32306;
+}

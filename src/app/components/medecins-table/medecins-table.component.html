@@ -1,0 +1,47 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Specialite</th>
+        <th scope="col">Experience</th>
+        <th scope="col">M.Fiscal</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Role</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of pageOfItems">
+        <th scope="row">{{m._id}}</th>
+        <td>{{m.gender | gender}}{{m.firstName}}</td>
+        <td>{{m.lastName}}</td>
+        <td>{{m.telephone}}</td>
+        <td>{{m.specialite}}</td>
+        <td>{{m.experience}}</td>
+        <td>{{m.matricule}}</td>
+        <td>{{m.adresse}}</td>
+        <td>{{m.role}}</td>
+        <td>{{m.gender}}</td>
+        <td>{{m.status}}</td>
+
+        <td>
+          <input type="image" (click)="confirmeMedecins(m._id)"  name="Name of image button" src="assets/images/confirme.webp" height="50px" width="100px" alt="text">
+            <input type="image"(click)="updateMedecins(m._id)"   name="Name of image button" src="assets/images/update.png" height="50px" width="100px" alt="text">
+            <input type="image" (click)="deleteMedecins(m._id)"  name="Name of image button" src="assets/images/supp.png" height="50px" width="50px" alt="text">  
+  
+        </td>
+      </tr>
+
+    </tbody>
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination 
+       [items]="medecins"  [pageSize]="4" (changePage)="onChangePage($event)"></jw-pagination>
+       </div>
+
+  </table>

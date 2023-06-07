@@ -1,0 +1,87 @@
+<app-banner title="MODIFIER RENDEY-VOUS"></app-banner>
+<div class="row contact-rooo no-margin">
+    <div class="container">
+       <div class="row">
+           
+       
+        <div style="padding:20px" class="col-sm-6">
+           
+        <h2 style="font-size:30px;color: blue; text-align: center; text-decoration: underline;">MODIFIER RENDEY-VOUS</h2>
+        <form [formGroup]="modifierForm" >
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>FirstName :</label></div>
+                <div class="col-sm-8"><input type="text" formControlName="firstName"    placeholder="Enter firstName patient " name="name" class="form-control input-sm"  ></div>
+            </div>
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>LastName:</label></div>
+                <div class="col-sm-8"><input type="text" formControlName="lastName"    placeholder="Enter lastName patient" name="name" class="form-control input-sm"  ></div>
+            </div>
+            
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Mobile Number:</label></div>
+                <div class="col-sm-8"><input type="telephone" formControlName="telephone"     placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
+            </div>
+            
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Adresse:</label></div>
+                <div class="col-sm-8"><input type="text" name="name" formControlName="adresse"   placeholder="Enter adresse patient" class="form-control input-sm"  ></div>
+            </div>
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Description:</label></div>
+                <div class="col-sm-8"><input type="text" name="name" formControlName="description"  placeholder="Enter description patient" class="form-control input-sm"  ></div>
+            </div>
+           
+            <label>Selection:</label><select class="custom-select" formControlName="select" >
+                <option selected >Specialite of Doctors</option>
+                <option value="1">Medecins Generaliste</option>
+                <option value="2">Chirugie Generale</option>
+                <option value="3">Gynecologue</option>
+                <option value="4">Urologie</option>
+                <option value="5">Pediatrie</option>
+                <option value="6">Cardio</option>
+                <option value="7">Reanimation</option>
+              </select>
+              <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Date:</label></div>
+                <div class="col-sm-8"><input type="date" name="name" formControlName="date"   class="form-control input-sm"  ></div>
+            </div>
+
+            
+               
+             <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                <div class="col-sm-8">
+                    <input type="image" (click)="modifier()"  name="Valider" src="assets/images/bouton.webp" alt="text" style="height: 100px;width: 100px;">
+ 
+                 
+                </div>
+            </div>
+        </form>
+        </div>
+    
+         <div class="col-sm-6">
+                
+              <div style="margin:50px" class="serv"> 
+            
+           
+         
+                          
+          
+                <img class="img-fluid" src="assets/images/mmm.png" alt="" />
+
+
+
+   
+        
+            
+            
+          
+       </div>    
+            
+         
+     </div>
+
+        </div>
+    </div>
+    
+  </div>

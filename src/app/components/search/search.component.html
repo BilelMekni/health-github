@@ -1,0 +1,114 @@
+<app-banner title="SEARCH"></app-banner>
+<div class="row contact-rooo no-margin">
+    <div class="container">
+       <div class="row">
+           
+       
+        <div style="padding:20px" class="col-sm-6">
+           
+        <h2 style="font-size:30px;color: blue; text-align: center; text-decoration: underline;">SEARCH</h2>
+        <form [formGroup]="searchForm" >
+            <div class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Adresse :</label></div>
+                <div class="col-sm-8"><input type="text" formControlName="adresse"  placeholder="Enter Adresse" name="name" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="searchForm.controls['adresse'].invalid && (searchForm.controls['adresse'].touched ||
+            searchForm.controls['adresse'].dirty)">
+            <div *ngIf="searchForm.controls['adresse'].errors.required" class="red">
+                Adreese is required
+            </div>
+            <div *ngIf="searchForm.controls['adresse'].errors.minlength" class="red">
+                Adresse has been 3 chars
+            </div>
+            <div *ngIf="searchForm.controls['adresse'].errors.maxlength" class="red">
+                Adresse has been most 50 chars
+            </div>
+            </div>
+            
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Experience Max:</label></div>
+                <div class="col-sm-8"><input type="text" name="name"  formControlName="experiencemax"  placeholder="Enter Your Experience" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="searchForm.controls['experiencemax'].invalid && (searchForm.controls['experiencemax'].touched ||
+            searchForm.controls['experiencemax'].dirty)">
+            <div *ngIf="searchForm.controls['experiencemax'].errors.required" class="red">
+                Experience max is required
+            </div>
+            
+            </div>
+            <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label>Experience Min:</label></div>
+                <div class="col-sm-8"><input type="text" name="name"  formControlName="experiencemin"  placeholder="Enter Your Experience" class="form-control input-sm"  ></div>
+            </div>
+            <div *ngIf="searchForm.controls['experiencemin'].invalid && (searchForm.controls['experiencemin'].touched ||
+            searchForm.controls['experiencemin'].dirty)">
+            <div *ngIf="searchForm.controls['experiencemin'].errors.required" class="red">
+                Experience min is required
+            </div>
+            
+            </div>
+             <div style="margin-top:10px;" class="row">
+                <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                <div class="col-sm-8">
+                 <button  (click)="search()" class="btn btn-success btn-sm">SEARCH</button>
+                 
+                </div>
+            </div>
+        </form>
+        </div>
+    
+         <div class="col-sm-6">
+                
+              <div style="margin:50px" class="serv"> 
+            
+           
+         
+                          
+          
+                <img class="img-fluid" src="assets/images/search.jpg" alt="" />
+
+
+   
+        
+            
+            
+          
+       </div>    
+            
+         
+     </div>
+
+        </div>
+        <div *ngFor="let r of searche">
+            <table class="table table-Secondary">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Experience Max</th>
+                    <th scope="col">Experience min</th>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">LastName</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Specialite</th>
+                  </tr>
+                </thead>
+                <tr>
+                    <td>{{r._id}}</td>
+                    <td>{{r.adresse}}</td>
+                    <td>{{r.experience}}</td>
+                    <td>{{r.experience}}</td>
+                    <td>{{r.firstName}}</td>
+                    <td>{{r.lastName}}</td>
+                    <td>{{r.telephone}}</td>
+                    <td>{{r.specialite}}</td>
+                </tr>
+                </table>
+
+        </div>
+        <div *ngIf="searche?.length== 0" style="color: crimson; font-size: 30px;   ">
+            Not Found Medecins
+        </div>
+    </div>
+    
+  </div>

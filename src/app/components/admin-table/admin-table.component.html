@@ -1,0 +1,36 @@
+<table class="table table-striped table-danger">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Role</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of admin">
+        <th scope="row">{{a._id}}</th>
+        <td>{{a.gender | gender}}{{a.firstName}}</td>
+        <td>{{a.lastName}}</td>
+        <td>{{a.telephone}}</td>
+        <td>{{a.adresse}}</td>
+        <td>{{a.role}}</td>
+        <td>{{a.gender}}</td>
+        <td>
+            <input type="image" name="Name of image button" src="assets/images/update.png" height="50px" width="100px" alt="text">
+            <input type="image" name="Name of image button" src="assets/images/supp.png" height="50px" width="50px" alt="text">  
+  
+
+        </td>
+      </tr>
+    </tbody>
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination 
+       [items]="admin"  [pageSize]="4" (changePage)="onChangePage($event)"></jw-pagination>
+       </div>
+  </table>

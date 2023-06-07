@@ -1,0 +1,33 @@
+<table class="table table-striped table-link">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let c of pageOfItems">
+        <th scope="row">{{c._id}}</th>
+        <td>{{c.firstName}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.telephone}}</td>
+        <td>{{c.description}}</td>
+        
+        <td>
+            <input type="image" name="Name of image button" src="assets/images/update.png" height="50px" width="100px" alt="text">
+            <input type="image" (click)="deleteContactProblem(c._id)" name="Name of image button" src="assets/images/supp.png" height="50px" width="50px" alt="text">  
+  
+
+        </td>
+      </tr> 
+    </tbody>
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination 
+       [items]="contact"  [pageSize]="4" (changePage)="onChangePage($event)"></jw-pagination>
+       </div>
+  </table>

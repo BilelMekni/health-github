@@ -1,0 +1,35 @@
+<app-banner title="ESPACE NOTIFICATIONS RESULTATS"></app-banner>
+<table class="table table-warning">
+    
+    <thead>
+        <tr>
+            
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+            <th scope="col">Accepter</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+         <tr *ngFor="let e of pageOfItems">
+            
+            <td>{{e.title}}</td>
+            <td>{{e.description}}</td>
+            <td>{{e.date}}</td>
+           <td>
+            <span class="badge rounded-pill bg-danger" type="button" (click)="display()"*ngIf="e.users.length==0">En Attend</span>
+            <span type="button" (click)="display(r.users[0])" class="badge rounded-pill bg-success" *ngIf="e.users.length>0">Accepted</span>
+        </td>
+            
+        </tr> 
+       
+
+    </tbody>
+
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination [items]="pubs" [pageSize]="4" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+
+</table>

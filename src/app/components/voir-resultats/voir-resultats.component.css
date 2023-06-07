@@ -1,0 +1,11 @@
+.row{
+    background-color: burlywood;
+    size-adjust: 50px;
+    font-size: large;
+}
+.pp{
+    text-align: center;
+    text-decoration: underline;
+    text-overflow: initial;
+    color: blue;
+}
